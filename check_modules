@@ -1,0 +1,11 @@
+#!/bin/bash
+
+for module in `grep "use " * | awk '{ print $2 }' | grep ";" | grep -v warnings | grep -v strict | sort -u | awk -F\; '{ print $1 }'`
+do
+    module_not_found=`perl -M${module} -e 1 2>&1`
+
+    if [[ ! -z ${module_not_found} ]]
+    then
+        echo Module ${module} not found.  
+    fi
+done

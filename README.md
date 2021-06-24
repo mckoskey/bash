@@ -1,3 +1,3 @@
 # bash Scripts
 
-Freely available scripts for Bourne Again Shell (bash)
+Free scripts for Bourne Again Shell (bash)
